@@ -1,5 +1,5 @@
 markupsafe
-jinja2
+jinja2==2.11.3
 flask
 flask_sqlalchemy
 flask_cors
