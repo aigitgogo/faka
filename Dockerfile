@@ -1,7 +1,6 @@
 FROM python:3.8-slim
 LABEL weihuzhe="aigc"
 
-# 备选数据库Sqlite \Mysql \ PostgreSQL
 ENV DB_TYPE='Sqlite'
 ENV DB_HOST='127.0.0.1'  
 ENV DB_PORT='3306'  
