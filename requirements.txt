@@ -1,4 +1,5 @@
 markupsafe
+jinja2
 flask
 flask_sqlalchemy
 flask_cors
