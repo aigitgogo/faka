@@ -12,7 +12,6 @@ WORKDIR /usr/src/app
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install Flask Gunicorn markupsafe
 
 COPY . .
 RUN chmod +x docker-entrypoint.sh
