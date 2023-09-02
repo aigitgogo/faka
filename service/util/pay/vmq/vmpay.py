@@ -40,7 +40,7 @@ class VMQ(object):
             elif r.json()['code'] == -1:
                 print(r.json())
                 # return {'qr_code':"手机监控端状态掉线，请检查后再重试"}
-                return {'qr_code':r.json()}
+                return {'qr_code':r.json()+'测试'}
                 
             else:
                 print(str(r.json()))
