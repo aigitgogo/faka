@@ -1,9 +1,9 @@
 from service.database.models import creat_table,drop_table,AdminUser
 from service.config.config import init_db
 from service.api.db import db
-# print(os.getenv('MYSQL_HOST'))
-# print(os.getenv('MYSQL_PORT'))
-# print(os.getenv('MYSQL_PASSWORD'))
+print(os.getenv('MYSQL_HOST'))
+print(os.getenv('MYSQL_PORT'))
+print(os.getenv('MYSQL_PASSWORD'))
 # 初始化数据
 import re
 import random
