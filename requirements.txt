@@ -1,4 +1,4 @@
-markupsafe
+markupsafe==2.0.1
 jinja2==2.11.3
 flask
 flask_sqlalchemy
