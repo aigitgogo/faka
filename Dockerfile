@@ -1,5 +1,5 @@
-# FROM python:3.8-slim
-# LABEL weihuzhe="aigc"
+FROM python:3.8-slim
+LABEL weihuzhe="aigc"
 
 # ENV DB_TYPE='Sqlite'
 # ENV DB_HOST='127.0.0.1'
@@ -8,13 +8,13 @@
 # ENV DB_PASSWORD='PASSWORD'
 # ENV DB_DATABASE='KAMIFKA' 
 
-# WORKDIR /usr/src/app
+WORKDIR /usr/src/app
 
-# COPY requirements.txt ./
-# RUN pip3 install --no-cache-dir -r requirements.txt
+COPY requirements.txt ./
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-# COPY . .
-# RUN chmod +x docker-entrypoint.sh
+COPY . .
+RUN chmod +x docker-entrypoint.sh
 
 # EXPOSE 8000
 
@@ -24,7 +24,7 @@
 
 
 # ------------------------------------
-FROM baiyuetribe/kamifaka:latest
+# FROM baiyuetribe/kamifaka:latest
 LABEL weihuzhe="aigc"
 # Mysql \ PostgreSQL
 ENV DB_TYPE='Mysql'
