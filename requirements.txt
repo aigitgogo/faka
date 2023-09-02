@@ -1,6 +1,7 @@
 markupsafe==2.0.1
 jinja2==2.11.3
 SQLAlchemy==1.4
+pyOpenSSL
 flask
 flask_sqlalchemy
 flask_cors
