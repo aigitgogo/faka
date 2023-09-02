@@ -50,7 +50,7 @@ SQL_PATH = os.path.join(os.path.dirname(__file__),'../../public/sql')
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'   #本地
 # app.config['SQLALCHEMY_DATABASE_URI'] =  'sqlite:///'+os.path.join(SQL_PATH,'kamifaka.db')   #默认数据库
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@127.0.0.1:336/KAFAKA?charset=utf8mb4'   #本地Docker
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@host:3306/faka?charset=utf8mb4'   #远程
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Yk1o5834K2ln@zeabur-aws-us-west-1-2.clusters.zeabur.com:30066/faka?charset=utf8mb4'   #远程
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://docker_db_1:root@127.0.0.1:3306/KAFAKA?charset=utf8mb4'   #本地
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://root:password@127.0.0.1:5432/KAFAKA'   #本地
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres+psycopg2://cmmpjjkinayyhk:2428996ef24132a272c88374071448af13aa3169ac551492e7046b264876080a@ec2-52-2-82-109.compute-1.amazonaws.com:5432/deail3ojvojiia'   #远程
