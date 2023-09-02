@@ -27,7 +27,7 @@ class VMQ(object):
             'price':total_price,
             'param':out_trade_no,
             'notifyUrl':self.notify
-        }        
+        }
         data['sign'] = hashlib.md5((data['payId']+str(data['param'])+str(data['type'])+str(data['price'])+self.key).encode('utf8')).hexdigest()
 
         r = requests.post(self.host_api+'/createOrder',json=data)
@@ -38,8 +38,10 @@ class VMQ(object):
                 res = r.json()['data']
                 return {'qr_code':res['payUrl'],'payjs_order_id':res['orderId'],'reallyPrice':res['reallyPrice'],'redirect':2} # 第三方状态1；本地2
             elif r.json()['code'] == -1:
-                print(r.json())
-                return {'qr_code':"手机监控端状态掉线，请检查后再重试"}
+                # print(r.json())
+                # return {'qr_code':"手机监控端状态掉线，请检查后再重试"}
+                return {'qr_code':r.json()}
+                
             else:
                 print(str(r.json()))
                 return False
