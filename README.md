@@ -5,7 +5,6 @@
 </p>
 
 <h1 align="center">佰阅发卡</h1>
-
 <p align="center">
   基于VUE3.0+FLASK构建的全新卡密发卡系统
     <br>
