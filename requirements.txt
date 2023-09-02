@@ -8,8 +8,8 @@ flask_jwt_extended==3.25.1
 python-alipay-sdk==2.1.1
 requests
 bcrypt
-gunicorn==19.10.0
-gevent
+gunicorn==20.1.0
+gevent==21.12.0
 pymysql
 flask_limiter
 psycopg2-binary
