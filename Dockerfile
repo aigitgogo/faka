@@ -26,7 +26,7 @@ ENV DB_DATABASE='KAMIFKA'
 FROM baiyuetribe/kamifaka:latest
 LABEL weihuzhe="aigc"
 # Mysql \ PostgreSQL
-ENV DB_TYPE='PostgreSQL'
+ENV DB_TYPE='Mysql'
 
 RUN sed -i "s|'postgresql+psycopg2://\${DB_USER}:\${DB_PASSWORD}@\${DB_HOST}:\${DB_PORT}/\${DB_DATABASE}'|'\`echo \$DATABASE_URL \| sed \'s/postgres/postgresql\\\+psycopg2/\'\`'|g" docker-entrypoint.sh && \
     sed -i '$d' docker-entrypoint.sh && \
