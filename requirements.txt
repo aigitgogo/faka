@@ -6,7 +6,7 @@ flask
 flask_sqlalchemy
 flask_cors
 flask_jwt_extended==3.25.1
-python-alipay-sdk==2.1.1
+python-alipay-sdk
 requests
 bcrypt
 gunicorn==20.1.0
