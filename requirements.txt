@@ -12,7 +12,7 @@ bcrypt
 gunicorn==20.1.0
 gevent==21.12.0
 pymysql
-flask_limiter
+flask_limiter==104
 psycopg2-binary
 # python-telegram-bot
 # qrcode
