@@ -2,7 +2,7 @@ pyopenssl
 markupsafe==2.0.1
 jinja2==2.11.3
 SQLAlchemy==1.4
-flask
+flask==1.1.4
 flask_sqlalchemy
 flask_cors
 flask_jwt_extended==3.25.1
