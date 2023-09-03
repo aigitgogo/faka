@@ -31,7 +31,7 @@ class VMQ(object):
         data['sign'] = hashlib.md5((data['payId']+str(data['param'])+str(data['type'])+str(data['price'])+self.key).encode('utf8')).hexdigest()
         query_string = f"payId={data['payId']}&type={data['type']}&price={data['price']}&param={data['param']}&notifyUrl={data['notifyUrl']}&sign={data['sign']}"
         url = f"{self.host_api}/createOrder?{query_string}"
-        response = requests.get(url)
+        r = requests.get(url)
         # r = requests.post(self.host_api+'/createOrder',json=data)
         # print(r.text)
         if r.status_code == 200:
@@ -41,16 +41,16 @@ class VMQ(object):
                 return {'qr_code':res['payUrl'],'payjs_order_id':res['orderId'],'reallyPrice':res['reallyPrice'],'redirect':2} # 第三方状态1；本地2
             elif r.json()['code'] == -1:
                 # print(r.json())
-                # return {'qr_code':"手机监控端状态掉线，请检查后再重试"}
-                return {'qr_code':r.json(),'data':data}
+                return {'qr_code':"手机监控端状态掉线，请检查后再重试"}
+                # return {'qr_code':r.json(),'data':data}
             else:
                 # print(str(r.json()))
-                return {'qr_code':r.json(),'data':data}
-                # return False
+                # return {'qr_code':r.json(),'data':data}
+                return False
         else:
             print(r.text)
-        return {'qr_code':r.json(),'data':data}
-        # return False
+        # return {'qr_code':r.json(),'data':data}
+        return False
 
     def check(self,orderId):     #这里是上一步主动生成的订单，单独调用
         data = {
