@@ -29,8 +29,10 @@ class VMQ(object):
             'notifyUrl':self.notify
         }
         data['sign'] = hashlib.md5((data['payId']+str(data['param'])+str(data['type'])+str(data['price'])+self.key).encode('utf8')).hexdigest()
-
-        r = requests.post(self.host_api+'/createOrder',json=data)
+        query_string = f"payId={data['payId']}&type={data['type']}&price={data['price']}&param={data['param']}&notifyUrl={data['notifyUrl']}&sign={data['sign']}"
+        url = f"{self.host_api}/createOrder?{query_string}"
+        response = requests.get(url)
+        # r = requests.post(self.host_api+'/createOrder',json=data)
         # print(r.text)
         if r.status_code == 200:
             if r.json()['code'] == 1:
