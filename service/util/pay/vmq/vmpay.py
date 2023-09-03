@@ -38,16 +38,17 @@ class VMQ(object):
                 res = r.json()['data']
                 return {'qr_code':res['payUrl'],'payjs_order_id':res['orderId'],'reallyPrice':res['reallyPrice'],'redirect':2} # 第三方状态1；本地2
             elif r.json()['code'] == -1:
-                print(r.json())
+                # print(r.json())
                 # return {'qr_code':"手机监控端状态掉线，请检查后再重试"}
-                return {'qr_code':r.json()+'测试'}
-                
+                return {'qr_code':r.json()}
             else:
-                print(str(r.json()))
-                return False
+                # print(str(r.json()))
+                return {'qr_code':r.json()}
+                # return False
         else:
             print(r.text)
-        return False
+        return {'qr_code':r.json()}
+        # return False
 
     def check(self,orderId):     #这里是上一步主动生成的订单，单独调用
         data = {
