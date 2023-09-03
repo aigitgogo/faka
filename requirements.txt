@@ -1,6 +1,6 @@
 markupsafe==2.0.1
-jinja2
-SQLAlchemy
+jinja2==1.3.24
+SQLAlchemy==1.3.24
 pyopenssl
 flask
 flask_sqlalchemy
