@@ -1,11 +1,11 @@
 {
-    "name": "佰阅发卡",
-    "description": "基于VUE3.0+FLASK构建的全新卡密发卡系统",
+    "name": "探金发卡",
+    "description": "卡密发卡系统",
     "keywords": [
-        "佰阅发卡"
+        "探金发卡"
     ],
-    "website": "https://github.com/Baiyuetribe/kamiFaka",
-    "repository": "https://github.com/Baiyuetribe/kamiFaka",
+    "website": "https://faka.zeabur.app",
+    "repository": "https://faka.zeabur.app",
     "stack": "container",
     "addons": [
         {
