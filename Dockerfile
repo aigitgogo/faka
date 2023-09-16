@@ -17,13 +17,11 @@ COPY . .
 RUN chmod +x docker-entrypoint.sh
 
 # EXPOSE 8000
-
 # ENTRYPOINT [ "/usr/src/app/docker-entrypoint.sh" ]
+# ENTRYPOINT ["gunicorn","-k", "gevent", "--bind", "0.0.0.0:8000", "--workers", "8", "app:app"]
 
-# # ENTRYPOINT ["gunicorn","-k", "gevent", "--bind", "0.0.0.0:8000", "--workers", "8", "app:app"]
-
-
-# ------------------------------------
+# ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
 # FROM baiyuetribe/kamifaka:latest
 LABEL weihuzhe="aigc"
 # Mysql \ PostgreSQL
